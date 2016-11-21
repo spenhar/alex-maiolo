@@ -1,5 +1,5 @@
 ---
-title:  Panelist/Speaker/Moderator/Organizer
+title:  Panelist / Speaker / Moderator / Organizer
 role:   
 desc:   
 year:   2001 - Present
