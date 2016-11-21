@@ -5,4 +5,4 @@ desc:
 year:   2015 - Present
 permalink:
 ---
-Voting member of The Grammy Awards
+Voting member of The Grammy Awards.
