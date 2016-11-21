@@ -1,0 +1,149 @@
+/**
+ * Animations
+ */
+@keyframes hover {
+  0% {
+    transform: translateY(-30%);
+  }
+
+  100% {
+    transform: translateY(30%);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+// Animations
+$timing: cubic-bezier(0.455,  0.030, 0.515, 0.955);
+$duration: 1s;
+
+.saucer {
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  // opacity: .8;
+
+
+  &:nth-child(1) {
+    top: 2%;
+    animation: slide $duration*8 $timing alternate infinite;
+    width: 24rem;
+    height: 24rem;
+    z-index: 1
+  }
+
+  &:nth-child(2) {
+    top: 15%;
+    animation: slide $duration*4 $timing alternate infinite;
+    width: 16rem;
+    height: 16rem;
+  }
+
+  &:nth-child(3) {
+    top: 30%;
+    animation: slide $duration*3 $timing alternate infinite;
+  }
+
+  &:nth-child(4) {
+    top: 45%;
+    animation: slide $duration*2.5 $timing alternate infinite;
+  }
+
+  &:nth-child(5) {
+    top: 60%;
+    animation: slide $duration*3 $timing alternate infinite;
+  }
+
+  &:nth-child(6) {
+    top: 90%;
+    animation: slide $duration*3.5 $timing alternate infinite;
+  }
+
+}
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+#name-header {
+  letter-spacing: .2rem;
+}
+
+.musigner {
+  position: relative;
+}
+#musician {
+  color: #F01616;
+  mix-blend-mode: multiply;
+  opacity: 1;
+}
+#musigner-3 {
+  position: absolute;
+  color: #1797b0;
+  mix-blend-mode: multiply;
+  top: 0;
+  opacity: 1;
+  // left: 200px;
+  // animation: tilt $duration $timing alternate infinite;
+  // animation: slide $duration*12 $timing alternate infinite;
+}
+
+hr {
+  box-sizing:border-box;
+  margin-top:16px;
+  margin-bottom:16px;
+  border:0;
+  border-bottom-width:1px;
+  border-bottom-style:solid;
+  border-bottom-color:rgba(0, 0, 0, .25);
+  border-width:1px;
+  border-color:currentcolor;
+  // margin-left:32px;
+  // margin-right:32px;
+}
+
+p {
+  font-weight: 300;
+}
+
+.post-content {
+  img {
+
+  }
+  p {
+    padding-bottom: 1.5rem;
+  }
+}
+
+#red-link {
+  color: $red;
+  // text-decoration: underline;
+  border-bottom: 2px solid $red;
+}

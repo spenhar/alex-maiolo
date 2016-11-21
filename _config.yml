@@ -1,0 +1,25 @@
+# Site settings
+title: Alex Maiolo
+email: hello@alexmaiolo.com
+description: > # this means to ignore newlines until "baseurl:"
+  Personal portfolio and writings of Alex Maiolo (@spenhar)
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://alexmaiolo.com" # the base hostname & protocol for your site
+twitter_username: gimmereverb
+instagram_username: alexmaiolo
+github_username:
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Build settings
+markdown: kramdown
+
+#Exclude files
+exclude: [node_modules, gulpfile.js]
+
+collections: projects
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/

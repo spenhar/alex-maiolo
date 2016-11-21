@@ -1,0 +1,43 @@
+---
+layout: homepage
+---
+<div class="pad-x-l">
+  <div class="saucer bg-orange left-s">
+  </div>
+  <div class="saucer bg-red left-l">
+
+  </div>
+  <div class="saucer bg-lime left-m">
+
+  </div>
+</div>
+
+<section class="pad-l pad-b-xl">
+  <div class="max-width-s pad-b-m">
+    <img src="/img/faces.jpg" alt="" class=""/>
+  </div>
+  <div class="measure">
+    <h1 class="helvetica tracked-tight">{{ site.title }}</h1>
+    <h2 class="">Immersion travel, participatory journalism, and purposeful work. <br>And music - there's always music.</h2>
+  </div>
+  <div class="pad-y-l">
+    <a class="bg-orange pad-m mar-r-l" href="mailto:{{ site.email }}">Email Me</a>
+    <a class="bg-lime pad-m" href="#work">Resume</a>
+  </div>
+
+</section>
+
+<section id="work" class="pad-l pad-y-xl cf">
+  <h2>Work Experience</h2>
+  <hr>
+  <div class="pad-y-m">
+    {% for project in site.projects %}
+      <div class="pad-b-l">
+        <h3>{{ project.title }}</h3>
+        <h4 class="red">{{ project.role }}<span class="orange">  {{ project.year }}</span></h4>
+        <h5 class="orange"></h5>
+        {{ project.content }}
+      </div>
+    {% endfor %}
+  </div>
+</section>
