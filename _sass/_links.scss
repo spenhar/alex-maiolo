@@ -9,7 +9,7 @@ a:link,
 a:visited{
     color:$black;
 }
-.link { text-decoration: none; }
+.link { text-decoration: none; box-shadow:none;}
 a:hover {
   //color:$b70;
   // box-shadow:0 2px 0 0 $b40;

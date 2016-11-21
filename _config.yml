@@ -18,8 +18,10 @@ markdown: kramdown
 #Exclude files
 exclude: [node_modules, gulpfile.js]
 
-collections: projects
 collections:
   projects:
     output: true
     permalink: /projects/:path/
+  bands:
+    output: true
+    permalink: /bands/:path/

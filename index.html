@@ -31,7 +31,7 @@ layout: homepage
   <h2>Work Experience</h2>
   <hr>
   <div class="pad-y-m">
-    {% for project in site.projects %}
+    {% for project in site.projects limit:7 %}
       <div class="pad-b-l">
         <h3>{{ project.title }}</h3>
         <h4 class="red">{{ project.role }}<span class="orange">  {{ project.year }}</span></h4>
@@ -39,5 +39,46 @@ layout: homepage
         {{ project.content }}
       </div>
     {% endfor %}
+  </div>
+</section>
+
+<section id="other-work" class="pad-l pad-y-xl cf">
+  <h2>Other Work</h2>
+  <hr>
+  <div class="pad-y-m">
+    {% for project in site.projects offset:7 %}
+      <div class="pad-b-l">
+        <h3>{{ project.title }}</h3>
+        <h4 class="red">{{ project.role }}<span class="orange">  {{ project.year }}</span></h4>
+        <h5 class="orange"></h5>
+        {{ project.content }}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="bands" class="pad-l pad-y-xl cf">
+  <h2>Bands I've been in.</h2>
+  <hr>
+  <div class="pad-y-m">
+    {% for project in site.bands %}
+      <div class="pad-b-l">
+        <h3>{{ project.title }}<a href="{{ project.spotify }}" class="mar-x-s link"><span class="lime">Listen on Spotify</span></a></h3>
+        <!-- <h4 class="red">{{ project.role }}<span class="orange">  {{ project.year }}</span></h4> -->
+        {{ project.content }}
+
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="education" class="pad-l pad-y-xl cf">
+  <h2>Education</h2>
+  <hr>
+  <div class="pad-y-m">
+      <div class="pad-b-l">
+        <h4>East Carolina University, Greenville NC <span class="orange">1986 - 1988</span></h4>
+        <h4>University of North Carolina, Chapel Hill <span class="orange">1988 - 1991</span></h4>
+      </div>
   </div>
 </section>
